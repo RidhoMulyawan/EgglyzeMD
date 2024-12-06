@@ -26,12 +26,12 @@
 
         <!-- LoginActivity dengan exported="true" -->
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.login.LoginActivity"
             android:exported="true" />
 
         <!-- SignupActivity dengan exported="true" -->
         <activity
-            android:name=".SignupActivity"
+            android:name=".ui.signup.SignupActivity"
             android:exported="true" />
 
         <!-- MainActivity dengan exported="false" karena hanya dijalankan dari dalam aplikasi -->

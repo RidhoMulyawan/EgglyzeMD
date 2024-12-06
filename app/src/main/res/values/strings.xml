@@ -8,4 +8,20 @@
     <string name="login_prompt">Sudah punya akun? </string>
     <string name="login_text">Login</string>
     <string name="forgot_password_text">Lupa Password?</string>
+
+    <!--Menu-->
+    <string name="home">Home</string>
+    <string name="history">History</string>
+    <string name="profile">Profile</string>
+
+    <!--Profile-->
+    <string name="my_account">My Account</string>
+    <string name="premium">Premium</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="help_center">Help Center</string>
+    <string name="rate_us">Rate Us</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.capstone.databinding.ActivityMainBinding
+import com.dicoding.capstone.ui.login.LoginActivity
+import com.dicoding.capstone.ui.profile.ProfileFragment
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -46,14 +48,18 @@ class MainActivity : AppCompatActivity() {
                     Log.d("MainActivity", "Home clicked")
                     true
                 }
-                R.id.navigation_dashboard -> {
+                R.id.navigation_history -> {
                     // Dashboard logic
                     Log.d("MainActivity", "Dashboard clicked")
                     true
                 }
-                R.id.navigation_notifications -> {
+                R.id.navigation_profile -> {
                     // Notifications logic
                     Log.d("MainActivity", "Notifications clicked")
+                    val profileFragment = ProfileFragment()
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.nav_host_fragment, profileFragment) // Pastikan ID fragment_container sesuai dengan ID yang Anda gunakan di XML
+                        .commit()
                     true
                 }
                 else -> false
