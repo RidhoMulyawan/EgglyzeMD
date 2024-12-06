@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">EGGLYZE</string>
+    <string name="full_name_hint">Nama Lengkap</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="confirm_password_hint">Konfirmasi Password</string>
+    <string name="signup_button_text">Daftar</string>
+    <string name="login_prompt">Sudah punya akun? </string>
+    <string name="login_text">Login</string>
+    <string name="forgot_password_text">Lupa Password?</string>
+</resources>
