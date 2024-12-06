@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_baseline_home_filled_24"
+        android:title="Home"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/ic_baseline_history_24"
+        android:title="Dashboard"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="Setting"
+        app:showAsAction="ifRoom" />
+</menu>

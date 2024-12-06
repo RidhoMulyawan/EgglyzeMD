@@ -27,20 +27,32 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
         auth = Firebase.auth
         binding.loginButton.setOnClickListener {
-            auth.signInWithEmailAndPassword(binding.emailEditText.getText().toString().trim(), binding.passwordEditText.getText().toString().trim())
+
+            val email = binding.emailEditText.text.toString().trim()
+            val password = binding.passwordEditText.text.toString().trim()
+
+            // Validasi jika email atau password kosong
+            if (email.isEmpty() || password.isEmpty()) {
+                Toast.makeText(
+                    this,
+                    "Email dan password tidak boleh kosong",
+                    Toast.LENGTH_SHORT
+                ).show()
+                return@setOnClickListener
+            }
+
+            auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
-                        // Sign in success, update UI with the signed-in user's information
                         Log.d(TAG, "signInWithEmail:success")
-                        val user = auth.currentUser
                         val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
+                        finish()
                     } else {
-                        // If sign in fails, display a message to the user.
                         Log.w(TAG, "signInWithEmail:failure", task.exception)
                         Toast.makeText(
                             baseContext,
-                            "Authentication failed.",
+                            "Anda belum memiliki akun",
                             Toast.LENGTH_SHORT,
                         ).show()
                     }
@@ -50,9 +62,8 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }
-
-
     }
+
     override fun onStart() {
         super.onStart()
         val currentUser = auth.currentUser
